@@ -1,2 +1,8 @@
+# Ignore python environment folder
 .venv/
+# Ignore VSCode folder
 .vscode/
+# Ignore images inside image folder
+images/
+# Don't ignore the test image
+!images/test_image.jpg

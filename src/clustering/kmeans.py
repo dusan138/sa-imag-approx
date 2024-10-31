@@ -21,7 +21,7 @@ class KMeansClustering:
         self.random_seed = random_seed
         self.init_method = init_method
 
-    def fit(self, data_set, predict=False):
+    def fit(self, data_set):
         # If predict is True, then return the list of clusters        
         
         if self.init_method == "random":
@@ -65,6 +65,9 @@ class KMeansClustering:
 
             centroids = new_centroids.copy()
             
+        self.centroids = centroids
+
+        return centroids, cluster_labels
 
     def __random_init(self, data_set):
         # Random cluster initialization
